@@ -51,7 +51,7 @@ if __name__ == '__main__':
     lnl_values = np.array([result[0] for result in results])
     sf_samples = np.stack([result[1] for result in results])
 
-    with h5py.File('COMPAS_lnl_data_Z_all.hdf', 'w') as f:
+    with h5py.File('/fred/oz016/Chayan/COMPAS_populations_project/COMPAS_lnl_data_Z_all.hdf', 'w') as f:
         f.create_dataset('lnl', data=lnl_values)
         f.create_dataset('sf_samples', data=sf_samples)
 
